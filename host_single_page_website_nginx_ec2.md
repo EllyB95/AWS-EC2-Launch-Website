@@ -53,16 +53,14 @@ sudo nano /etc/nginx/nginx.conf
 Inside the `server` block, update the `location /` block to point to your SPA's build directory:
 
 ```nginx
-server {
-    listen       80;
-    server_name  localhost;
+
 
     location / {
         root   /usr/share/nginx/html;
         index  index.html;
         try_files $uri $uri/ /index.html;
     }
-}
+
 ```
 
 ### 9. Restart Nginx:
